@@ -1,49 +1,120 @@
-body{
+body {
     font-family: 'Times New Roman', Times, serif;
-    margin:0;
+    margin: 0;
     padding: 20px;
     background-color: #2f2f2f;
     color: rgb(103, 160, 229);
 }
 
-.nav-container{
+.nav-container {
     margin-bottom: 40px;
 }
 
-h2{
+h2 {
     margin-bottom: 15px;
 }
 
-.nav1{
+.nav1 {
     background-color: #919191;
     padding: 8px;
 }
 
-.nav1 ul{
+.nav1 ul {
     margin: 0;
     padding: 0;
-    list-style-type:none;
+    list-style-type: none;
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
 }
 
-.nav1 li{
+.nav1 li {
     display: inline;
 }
-.nav1 a{
-   text-decoration: none; 
-   color: rgb(255, 254, 254);
-   /* background-color: #293138; */
-   padding: 5px 15px;
-   cursor:pointer;
+
+.nav1 a {
+    text-decoration: none;
+    color: rgb(255, 254, 254);
+    /* background-color: #293138; */
+    padding: 5px 15px;
+    cursor: pointer;
+    position: relative;
 }
 
-.nav1 .login-btn{
-    background-color: #053b68;
+.nav1 .login-btn {
+    background-color: #0d4877;
     color: rgb(190, 192, 194);
     border: none;
-    padding:5px 15px;
+    padding: 5px 15px;
     border-radius: 3px;
     cursor: pointer;
+
 }
 
+.nav1 .login-btn:hover {
+    background-color: #0c395e;
+}
+
+.nav1 a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: #105380;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.nav1 a:hover::after {
+    transform: scaleX(1);
+
+}
+
+.nav2 {
+    background-color: #55174b;
+    padding: 20px;
+    width: 200px;
+}
+
+.nav2 ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav2 li {
+    margin-bottom: 13px;
+}
+
+.nav2 a {
+    text-decoration: none;
+    color: rgb(255, 254, 254);
+    display: block;
+    padding: 7px;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+}
+
+.nav2 a:hover {
+    background-color: #720660;
+    color: #eb94e2;
+}
+
+.nav2 .login-btn {
+    background-color: #a30e87;
+    color: rgb(252, 252, 252);
+    border: none;
+    padding: 5px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 50%;
+    margin-left: 5px;
+
+}
+
+.nav2 .login-btn:hover {
+    background-color: #840974;
+}
